@@ -2,27 +2,39 @@
   height: 100vh;
   display: flex;
   color: white;
+  
+  
+  
 }
 
 .App__Aside {
- 
+  background-image: url('./pages/img/travel.jpeg');
+  background-repeat: no-repeat;
+  width: 50%;
   background-color: #ffffff;
+  color: white;
+}
+.userSide{
   
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 150px;
+
 }
 
 .App__Form {
   width: 50%;
-  background-color: #40778f;
+  background-color: #f4f8ff;
   padding: 25px 40px;
   overflow: auto;
- 
 }
 
 .PageSwitcher {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10%;
- 
 }
 
 .PageSwitcher__Item {
@@ -38,7 +50,7 @@
 }
 
 .PageSwitcher__Item--Active {
-  background-color: #5ED0C0;
+  background-color: #225E62;
   color: white;
 }
 
@@ -75,8 +87,22 @@
 }
 
 .FormTitle__Link--Active {
+  color: #29566D;
+  border-bottom: 1px solid #29566D;
+}
+.headerText{
+  background-image: url('./pages/img/2.png');
+  border: 1px solid white;
+  box-shadow:0px 5px 5px black;
+  text-align: center;
+  padding-bottom: 5px;
   color: white;
-  border-bottom: 1px solid #199087;
+    
+}
+
+
+.space{
+  padding: 10px;
 }
 
 .FormField {
@@ -87,13 +113,13 @@
   display: block;
   text-transform: uppercase;
   font-size: .9em;
-  color: white;
+  color: black;
 }
 .FormField__Input {
   width: 85%;
   background-color: transparent;
   border: none;
-  color: white;
+  color: black;
   outline: none;
   border-bottom: 1px solid #445366;
   font-size: 1em;
@@ -107,7 +133,7 @@
 }
 
 .FormField__Button {
-  background-color: #52C4B9;
+  background-color: #29566D;
   color: white;
   border: none;
   outline: none;
@@ -118,7 +144,7 @@
 }
 
 .FormField__Link {
-  color: #ffffff;
+  color: black;
   text-decoration: none;
   display: inline-block;
   border-bottom: 1.5px solid #225E62;
@@ -126,7 +152,7 @@
 }
 
 .FormField__CheckboxLabel {
-  color: #ffffff;
+  color: black;
   font-size: .9em;
 }
 
@@ -136,8 +162,8 @@
 }
 
 .FormField__TermsLink {
-  color: white;
-  border-bottom: 1px solid #199087;
+  color: black;
+  border-bottom: 1px solid #225E62;
   text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
