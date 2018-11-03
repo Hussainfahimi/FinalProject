@@ -12,7 +12,7 @@ class App extends Component {
         <div className="App">
           <div className="App__Aside">
           
-          
+          jhghj
           
           
           </div>
@@ -23,13 +23,16 @@ class App extends Component {
               </div>
 
               <div className="FormTitle">
-                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
+                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or 
+                  <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
               </div>
 
               <Route exact path="/" component={SignUpForm}>
               </Route>
+
               <Route path="/sign-in" component={SignInForm}>
               </Route>
+              
           </div>
 
         </div>
