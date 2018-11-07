@@ -50,6 +50,11 @@ class SignUpForm extends Component {
                 <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
 
               </div>
+              <div className="car-description">
+                <label className="car-description" >car description</label>
+                <input type="text" id="text" className="col-sm-1" placeholder ="    Make   "/> <input type="text" id="text" className="col-sm-2 " placeholder ="    modle   "/> <input type="text" id="text" className="col-sm-3 " placeholder ="   Year   "/>  <input type="text" id="text" className="col-sm- " placeholder =" Licence palate " name="text" value={this.state.text} onChange={this.handleChange} />
+ 
+              </div>
 
 
 

@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import SignUpForm from './pages/SignUpForm';
 import SignInForm from './pages/SignInForm';
-
-
-
-
-
-
 import './App.css';
 
 class App extends Component {
@@ -47,6 +41,7 @@ class App extends Component {
             </Route>
             <Route path="/sign-in" component={SignInForm}>
             </Route>
+
           </div>
 
         </div>
