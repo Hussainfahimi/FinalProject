@@ -38,7 +38,7 @@ class SignInForm extends Component {
         }).then(response => {
             console.log(response);
             if (response.data && response.data[0] && response.data[0]._id && (response.data[0]._id.length > 0)) {
-                console.log("yes");
+                window.localStorage.setItem('authorized', 'true')
                 this.setState({ redirect: true });
             }
             else {
@@ -86,7 +86,7 @@ class SignInForm extends Component {
                             </div>
 
                             <div className="FormField">
-                                <button id="main-signIn" type="submit" className="FormField__Button mr-20">Sign In</button> <Link to="/" className="FormField__Link">Create an account</Link>
+                                <button id="main-signIn" type="submit" className="FormField__Button mr-20">Sign In</button> <Link to="/sign-up" className="FormField__Link">Create an account</Link>
                             </div>
                         </form>
                     </div>
