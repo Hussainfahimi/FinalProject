@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { Redirect, HashRouter as Router, Route, NavLink, Link } from 'react-router-dom';
 
 class SignUpForm extends Component {
     constructor() {
@@ -31,11 +32,39 @@ class SignUpForm extends Component {
 
         console.log('The form was submitted with the following data:');
         console.log(this.state);
+
+        axios.post("/api/user/signup", {
+            email: this.state.email,
+            name: this.state.name,
+            password: this.state.password
+        }).then(response => {
+            console.log(response);
+        }).catch(error => { 
+            console.log(error); 
+        });
+
     }
 
     render() {
         return (
-        <div className="FormCenter">
+            
+            <div className="App">
+            <div className="App__Aside">
+                <div className="userSide"></div>
+            </div>
+            <div className="App__Form">
+                <div className="PageSwitcher">
+                    <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
+                    <NavLink exact to="/sign-up" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
+                </div>
+                <div className="headerText">
+                    <div className="col-md-4">
+    
+                        <h3>Welcome to Fellow Traveler</h3>
+                    </div>
+                </div><hr></hr>
+                <div className="space"></div>
+                <div className="FormCenter">
             <form onSubmit={this.handleSubmit} className="FormFields">
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="name">Full Name</label>
@@ -64,8 +93,16 @@ class SignUpForm extends Component {
               </div>
             </form>
           </div>
+            </div>
+        </div>   
+
+
+        
+          
         );
     }
+
 }
+
 
 export default SignUpForm;
