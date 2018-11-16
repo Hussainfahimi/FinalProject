@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
+const driverController = require("../../controllers/driverController");
 
 // Matches with "/api/user"
 router.route("/home")
@@ -18,6 +19,16 @@ router.route("/signin")
 
 router.route("/")
 .post(userController.signin);
+
+
+router.route("/driverForm")
+  .post(driverController.create);
+
+router.route("/alldrivers")
+  .get(driverController.findAll);
+
+
+
 
 
 // Matches with "/api/user/:id"

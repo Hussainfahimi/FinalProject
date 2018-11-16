@@ -1,3 +1,8 @@
 module.exports = {
-  User: require("./user")
+  User: require("./user"),
+  Driver: require("./driver")
 };
+
+
+  
+
