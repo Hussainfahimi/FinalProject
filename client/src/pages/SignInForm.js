@@ -67,7 +67,7 @@ class SignInForm extends Component {
                         <NavLink exact to="/sign-up" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
                     </div>
                     <div className="headerText">
-                        <div className="col-md-4">
+                        <div className="col-md-12">
         
                             <h3>Welcome to Fellow Traveler</h3>
                         </div>
