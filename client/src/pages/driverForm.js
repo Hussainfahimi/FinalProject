@@ -37,6 +37,7 @@ class DriverForm extends Component {
 
         console.log('The form was submitted with the followig data:');
         console.log(this.state);
+        alert('Registration was successful')
 
         //date: this.state.date,
         //time: this.state.time
