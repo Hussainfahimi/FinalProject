@@ -35,38 +35,55 @@ class Home extends Component {
         }
         return (
             <div>
-                <div className="row-md-10">
-                    <div className="col-md-8"><h2>Available Drivers:</h2></div>
+                <div className="driver-table">
+                <div className="driver-registration">
+                        <button type="submit" className="driver-btn" ><Link to="/driverForm" className="FormField__Link rigister">Register as Driver</Link></button>
+                    </div>
+                    <hr />
+                    <div className="driver-available"><h2>Available Drivers:</h2></div>
+                    
 
                     <div className="available-driver">
-                
-                        {this.state.Driver.map(driver => (
-                            <div key={driver._id}>
-                                
-                                    <strong>
-                                        {"Name: " + driver.fullName}<br />
-                                        
-                                        {"Email: " + driver.email}<br />
-                                        {"Phone: " + driver.phone}<br />
 
-                                        {"Trip Info: " + driver.trip}<br />
+                        <div className="card-group">
+                            <div className="card">
+                                <div className="card-body">
 
-                                        {"Car Info: " + driver.car}<br />
-                                       
-                                       
-                                    </strong>
-                                    <hr />
-                        
+
+                                    {this.state.Driver.map(driver => (
+                                        <div key={driver._id}>
+
+                                            <strong>
+                                                <h3 className="card-title"> {"Name: " + driver.fullName}<br /></h3>
+
+                                                <h5 className="card-text"> {"Email: " + driver.email}<br /></h5>
+
+                                                <h5 className="card-text">  {"Phone: " + driver.phone}<br /></h5>
+
+                                                <h5 className="card-text">  {"Trip Info: " + driver.trip}<br /></h5>
+
+                                                <h5 className="card-text"> {"Car Info: " + driver.car}<br /></h5>
+
+
+                                            </strong>
+                                            <hr />
+                                        </div>
+                                    ))}
+
+
+
+                                </div>
+
+
                             </div>
-                        ))}
+
+                        </div>
 
                     </div>
 
                 </div>
 
-                <div className="driver-registration">
-                    <button type="submit" className="driver-btn" ><Link to="/driverForm" className="FormField__Link">Register as Driver</Link></button>
-                </div>
+
             </div>
         );
     }
